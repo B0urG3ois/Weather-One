@@ -1,0 +1,88 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container">
+        <img src="img/cuaca.png">
+        <a class="navbar-brand" href="#!/home"><b>Weather One</b></a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarDarkSupportedContent" aria-controls="navbar2SupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse text-center justify-content-end" id="navbarDarkSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item mx-5"> <a class="nav-link" href="#!/home">Home</a> </li>
+                <li class="nav-item mx-5"> <a class="nav-link" href="#!/about">About Me</a> </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <button class="btn my-2 my-sm-0 btn-primary" type="submit" ng-click="logOut()">Logout</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div class="py-5 align-items-center d-flex" style="background-image: url(img/banner.jpg); background-size: 100% 100%; background-attachment: fixed;">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-12 h-75" style=" background-image: url(img/1.jpg); background-position: top left;  background-size: 100%;  background-repeat: repeat;">
+                <div class="row">
+                    <div class="col-md-6 h-50">
+                        <h2> 
+                            <p>
+                                <h1><b>{{Nama}}, {{Country}}</b></h1>
+                                <h5><b>( {{Lat}}, {{Lon}} )</b></h5>
+                                <h3 style="text-transform: capitalize;">{{Desc}}</h3>
+                            </p>
+                            <p></p></br>
+                            <p>
+                                <h5><b><strong>NOW</strong></b></h5>
+                                <h1>{{Celcius}} &#8451</h1>
+                            </p>
+                        </h2>
+                    </div>
+                    <div class="col-md-6 h-50 text-center" style="color: white">
+                        <p></p></br>
+                        <p></p></br>
+                        <img ng-src="http://openweathermap.org/img/w/{{Icon}}.png" height="100" width="100"></br>
+                        <p>
+                            <h1><b>{{ clock | date:'HH:mm:ss'}}</b></h1>
+                            <h3><b>{{ Today | date : "fullDate" }}</b></h3>
+                        </p>
+                    </div>
+                </div>
+                <div class="row" style="color: white">
+                    <div class="col-md-6 h-50" style="background-color: rgba(255,165,0, .5);">
+                        <p>
+                            <h5><b><strong>CLOUDS</strong></b></h5>
+                            <h1>{{Cloud}} %</h1>
+                        </p>
+                        <hr>
+                        <p>
+                            <h5><b>WIND</b></h5>
+                            <h1>{{Speed}} Km/h</h1>
+                        </p>
+                        <hr>
+                        <p>
+                            <h5><b>HUMIDITY</b></h5>
+                            <h1>{{Humidity}} %</h1>
+                        </p>
+                        <hr>
+                    </div>
+                    <div class="col-md-6 h-50" style="background-color: rgba(135, 206, 250, .5);">
+                        <p>
+                            <h5><b>TEMPERATURE MAX</b></h5>
+                            <h1>{{CelciusMax}} &#8451</h1>
+                        </p>
+                        <hr>
+                        <p>
+                            <h5><b>TEMPERATUR MIN</b></h5>
+                            <h1>{{CelciusMin}} &#8451</h1>
+                        </p>
+                        <hr>
+                        <p>
+                            <h5><b>PRESSURE</b></h5>
+                            <h1>{{Pressure}} hpa</h1>
+                        </p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
